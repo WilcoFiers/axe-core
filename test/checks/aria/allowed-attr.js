@@ -8,7 +8,7 @@ describe('aria-allowed-attr', function () {
 		data: function (d) {
 			this._data = d;
 		}
-	};
+	}; 
 
 	afterEach(function () {
 		fixture.innerHTML = '';
