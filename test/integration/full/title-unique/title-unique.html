@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>title unique</title>
+<link rel="stylesheet" type="text/css" href="/node_modules/mocha/mocha.css" />
+<script src="/node_modules/mocha/mocha.js"></script>
+<script src="/node_modules/chai/chai.js"></script>
+<script src="/dist/axe.js"></script>
+<script>
+	mocha.setup({
+		timeout: 10000,
+		ui: 'bdd'
+	});
+	var assert = chai.assert;
+</script>
+</head>
+<body>
+<div id="mocha"></div>
+
+<iframe src="title-unique-1.html" id="frame1"></iframe>
+<iframe src="title-unique2.html"></iframe>
+<iframe src="title-unique3.html"></iframe>
+<iframe src="title-unique4.html"></iframe>
+<iframe src="title-unique5.html"></iframe>
+
+<script src="title-unique.js"></script>
+<script src="/test/integration/adapter.js"></script>
+</body>
+</html>

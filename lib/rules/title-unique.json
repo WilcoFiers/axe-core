@@ -1,0 +1,18 @@
+{
+  "id": "title-unique",
+  "selector": "html",
+  "tags": [
+    "wcag2a",
+    "wcag242"
+  ],
+  "metadata": {
+    "description": "",
+    "help": "",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/1.1/unique-titles"
+  },
+  "all": [],
+  "any": [],
+  "none": [
+    "unique-titles"
+  ]
+}
