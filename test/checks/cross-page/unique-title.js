@@ -10,17 +10,17 @@ describe('unique-title', function () {
 
 	afterEach(function () {
 		fixture.innerHTML = '';
-		utils.clear();
+		localStorage.clear();
 	});
 
 	function setTitle(title) {
-		document.getElementsByType('title')[0].textContent = title;
+		document.getElementsByTagName('title')[0].textContent = title;
 	}
 
 	it('returns true when there are no titles', function () {
 		setTitle('test title');
 
-		utils.store.set('unique-title', {});
+		localStorage.setItem('axe-core.unique-title', '{}');
 
 		assert.isTrue(checks['unique-title'].evaluate());
 	});
@@ -32,7 +32,7 @@ describe('unique-title', function () {
 		data[url + '/1'] = 'some title';
 		data[url + '/2'] = 'other title';
 		data[url + '/3'] = 'better title';
-		utils.store.set('unique-title', data);
+		localStorage.setItem('axe-core.unique-title', JSON.stringify(data));
 
 		assert.isTrue(checks['unique-title'].evaluate());
 	});
@@ -44,7 +44,7 @@ describe('unique-title', function () {
 		data[url] = 'test title';
 		data[url + '/2'] = 'other title';
 		data[url + '/3'] = 'better title';
-		utils.store.set('unique-title', data);
+		localStorage.setItem('axe-core.unique-title', JSON.stringify(data));
 
 		assert.isTrue(checks['unique-title'].evaluate());
 	});
@@ -56,7 +56,7 @@ describe('unique-title', function () {
 		data[url + '/1'] = 'test title';
 		data[url + '/2'] = 'other title';
 		data[url + '/3'] = 'better title';
-		utils.store.set('unique-title', data);
+		localStorage.setItem('axe-core.unique-title', JSON.stringify(data));
 
 		assert.isFalse(checks['unique-title'].evaluate());
 	});
