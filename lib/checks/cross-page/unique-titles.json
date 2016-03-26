@@ -1,6 +1,6 @@
 {
-  "id": "unique-title",
-  "evaluate": "unique-title.js",
+  "id": "unique-titles",
+  "evaluate": "unique-titles.js",
   "metadata": {
     "impact": "critical",
     "messages": {
