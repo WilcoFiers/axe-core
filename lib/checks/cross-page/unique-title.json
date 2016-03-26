@@ -1,0 +1,10 @@
+{
+  "id": "unique-title",
+  "metadata": {
+    "impact": "critical",
+    "messages": {
+      "pass": "",
+      "fail": ""
+    }
+  }
+}
